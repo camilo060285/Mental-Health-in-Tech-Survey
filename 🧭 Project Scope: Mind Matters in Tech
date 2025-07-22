@@ -1,0 +1,75 @@
+🧭 Project Scope: Mind Matters in Tech
+🎯 1. Goals
+The goal of this project is to explore and understand the relationship between workplace environments and mental health outcomes in the tech industry. More specifically, this project aims to:
+
+Identify key factors that influence whether a tech worker seeks mental health treatment.
+
+Predict treatment-seeking behavior using machine learning classification models.
+
+Visualize patterns in mental health attitudes across demographics and workplace characteristics.
+
+Provide actionable insights for employers to improve mental health support.
+
+💾 2. Data
+Dataset: Mental Health in Tech Survey (Kaggle)
+
+Source: Open Sourcing Mental Illness (OSMI)
+
+Key features include:
+
+Demographic information: age, gender, country, etc.
+
+Employment characteristics: remote work status, benefits, company size, openness to mental health.
+
+Mental health history: past diagnoses, treatment history, perception of stigma.
+
+Company support data: availability of resources, policies, training.
+
+Assumptions and notes:
+
+The dataset may contain missing, inconsistent, or sensitive entries (especially in gender and text responses).
+
+It is cross-sectional survey data, meaning causal relationships cannot be confirmed, only associations.
+
+📊 3. Analysis
+Step 1: Data Cleaning & Preprocessing
+Handle missing values and remove inconsistent entries.
+
+Standardize categorical responses (e.g., normalize gender labels).
+
+Encode categorical variables for modeling (e.g., one-hot encoding).
+
+Step 2: Exploratory Data Analysis (EDA)
+Analyze distributions of age, gender, and mental health treatment.
+
+Investigate treatment rates by workplace factors.
+
+Use visualization tools (Seaborn, Plotly) to explore relationships and trends.
+
+Step 3: Modeling
+Build classification models to predict likelihood of seeking treatment:
+
+Logistic Regression
+
+Random Forest
+
+XGBoost
+
+Evaluate using:
+
+Accuracy
+
+Precision
+
+Recall
+
+F1 Score
+
+ROC Curve
+
+Step 4: Insights and Recommendations
+Identify features with the strongest impact on treatment behavior.
+
+Segment findings by demographics and workplace types.
+
+Provide practical suggestions for tech employers based on model results and trends.
