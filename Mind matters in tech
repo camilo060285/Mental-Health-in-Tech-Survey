@@ -1,0 +1,113 @@
+🧪 Problem Statement
+In the tech industry, mental health challenges are widespread, yet support systems vary greatly between companies. This project investigates the relationship between workplace support for mental health and an employee’s likelihood of seeking treatment.
+
+Problem:
+Does having company-provided mental health support increase the probability that a tech worker will seek mental health treatment?
+
+Approach:
+To answer this, we use hypothesis testing to determine if there is a statistically significant difference in treatment-seeking behavior between employees who report receiving mental health support at work and those who do not.
+
+We also apply logistic regression to control for confounding factors such as age, gender, and work setting, providing a more robust understanding of the impact workplace support may have.
+
+
+🧾 Load, Check, and Inspect Data
+We begin by loading the Mental Health in Tech Survey dataset, which includes responses from 1,259 individuals across 27 variables.
+
+✅ Units of Observation
+Each row represents one individual respondent from the tech industry, making the unit of observation appropriate for our analysis of individual behaviors and experiences related to mental health.
+
+📦 Key Variables Available
+The dataset contains several important variables relevant to our hypothesis, including:
+
+treatment: Whether the individual has sought treatment for mental health (our target variable).
+
+benefits, care_options, wellness_program, seek_help, anonymity, and leave: Indicators of workplace mental health support.
+
+Age, Gender, Country, remote_work, no_employees: Demographic and employment context.
+
+work_interfere: How mental health interferes with work.
+
+These variables give us the necessary granularity to explore both individual and workplace factors.
+
+🔍 Initial Observations
+The dataset has 1,259 rows and 27 columns.
+
+Some columns have missing values, notably:
+
+state: 515 missing
+
+work_interfere: 264 missing
+
+self_employed: 18 missing
+
+comments: 1,095 missing — this is a free-text field, not used for quantitative analysis
+
+🧪 Next Steps
+Clean and standardize key variables (e.g., Gender, Age)
+
+Handle missing values, especially in work_interfere and self_employed
+
+Begin exploratory data analysis to uncover trends and patterns
+
+
+🧹 Data Wrangling and Tidying
+To prepare the dataset for analysis, we performed the following cleaning steps:
+
+📐 Shape of the Data
+Before cleaning: 1,259 rows × 27 columns
+
+After cleaning: 1,251 rows × 25 columns
+(Removed unrealistic ages and columns with excessive missing values)
+
+🛠 Data Cleaning Steps
+Standardized column names to lowercase with underscores for consistency.
+
+Converted the timestamp column to datetime format.
+
+Filtered invalid age entries by keeping respondents aged between 17 and 99.
+
+Dropped high-missing-value columns like comments and state.
+
+Filled missing values:
+
+work_interfere → filled with "Don't know"
+
+self_employed → filled with "Not specified"
+
+🧾 Data Types (Post-Cleaning)
+All variables now have appropriate types for analysis, including categorical (object) and numerical (int, datetime) formats.
+
+
+🔍 Explore the Data
+Once cleaned, we explored the dataset through summary statistics and visualizations to understand patterns and relationships related to mental health in the tech industry.
+
+📊 Descriptive Statistics
+Age was the primary numerical variable:
+
+Mean: 32.1 years
+
+Median: 31 years
+
+Range: 18 – 72 years
+
+Standard Deviation: 7.29 years
+
+The age distribution is centered in the late 20s to mid-30s, which reflects the young adult demographic common in tech.
+
+🧠 There were no strong correlations among numerical features, as age was the only quantitative field.
+
+📈 Univariate Visualizations
+Age Distribution: Most respondents are between 25 and 40 years old.
+
+Treatment Count: A significant number of tech workers reported having sought treatment for mental health issues.
+
+📊 Multivariate Visualizations
+Mental Health Benefits vs. Treatment:
+Respondents whose companies offered mental health benefits were more likely to have sought treatment.
+
+Work Interference vs. Treatment:
+As mental health interference at work increased ("Often" or "Sometimes"), the likelihood of seeking treatment also increased.
+
+🔍 These early insights suggest that both company-provided support and perceived work interference are strong indicators of treatment behavior — supporting our project hypothesis.
+
+
